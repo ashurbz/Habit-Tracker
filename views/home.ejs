@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+
+<body>
+    <div><h1>Habit-Tracker</h1></div>
+    <div id="newHabitLabel">
+        Add A New Habbit 
+        <span style="float: right;"> Date : 
+            <%=daysOfWeek[date.getDay()]%> 
+            <%=date.getDate()%> 
+            <%=monthNames[date.getMonth()]%>
+        </span>
+    </div>   
+    
+    <form action="/create" id="addHabit" method="post">
+    <input  name="newHabit" type="text" required="true" placeholder="Enter here.....">
+    <button type="submit">
+         <i  class="fa fa-plus fa-2x" aria-hidden="true"></i>
+    </button>
+    </form>
+    
+    <ul> 
+    <li> 
+        <i class="fa fa-list" aria-hidden="true"></i>  
+        <span style="float: right;"><%for(let i=0,j=0;i<7;i++ ) {%>
+
+                    <%let day=date.getDay()-i %>
+                    <% if(day<0){%>
+                    <% day=daysOfWeek.length-1-j %>
+                    <% j++ %>
+                    <%}%>   
+             <span class="item">  &nbsp;&nbsp;<%if(i==0) {%>
+                        Today
+                        <%}%> 
+                        <%if(i!=0) {%>
+                        <%=daysOfWeek[day]%>
+                        <%}%>
+             </span>  
+                    <%}%>
+        </span> 
+    </li>
+    <form action="/save" method="post" id="addChanges">
+        
+        <%for(let i=0;i<habits.length;i++ ) {%>
+            <li> <a style="text-decoration: none; color: red;" href="/delete/?id=<%=habits[i].id%>"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
+                <div><%=habits[i].habit%> 
+                <input style="display: none;" name="id" type="text" value="<%=habits[i]._id%>">
+                     
+                </div>
+                <span style="float: right;"><%for(let j=0;j<7;j++ ) {%>
+                <span class="item" >   <%if(habits[i].status[j]==" "){%>
+                &nbsp;&nbsp; &nbsp;&nbsp; 
+                <i class="fa fa-ban" onclick="change(this)" id="none"  aria-hidden="true"> 
+                <input value="<%=habits[i].status[j]%>"  name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>  
+                        
+                    <%}%> 
+                <%  if(habits[i].status[j]=='done'){%>
+
+                &nbsp;&nbsp; &nbsp;&nbsp; 
+                <i class="fa fa-check" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i> 
+                        
+                    <%}%> 
+                <%  if(habits[i].status[j]=='notDone'){%>
+
+                &nbsp;&nbsp; &nbsp;&nbsp; 
+                <i name="dfdsf" class="fa fa-times" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>
+                        
+                <%}%> 
+                
+                
+                </span>  
+                    
+        
+         
+        <%}%></span>
+            </li> 
+
+            <%}%>
+            <button type="submit">Submit</button>
+        </form>
+          
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="notify.js"></script>
+    <script src="https://use.fontawesome.com/549dd1e837.js"></script>  
+    <script src="script.js"></script>  
+   
+</body>
+
+</html>

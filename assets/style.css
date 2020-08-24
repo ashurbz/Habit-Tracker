@@ -1,0 +1,166 @@
+
+/* setting fonts and width of entire web app */
+body{
+    font-family: sans-serif;
+    width: 70%;
+    /* margin to keep in center  */
+    margin: auto;
+}
+
+/* addHabit form d */
+#addHabit{
+    display: flex;
+    justify-content: baseline;
+
+
+}
+
+#addChanges {
+ width: 100%;
+
+}
+
+/* button for saving changes */
+#addChanges button{
+  width: 100%;
+background-color: greenyellow;
+/* color: aliceblue; */
+font-weight: bold;
+font-size: large;
+padding: 10px;
+border: 0;
+cursor: pointer;
+/* added outer shadow to the button */
+box-shadow: 0 0 4px 2px black;
+}
+
+
+
+/* header  */
+h1{
+    text-align: center;
+    background-image: linear-gradient(greenyellow,white);
+    padding: 20px;
+    margin: 0;
+}
+
+/* label for text field */
+#newHabitLabel{
+
+    font-weight: bold; 
+    font-size: large; 
+    background-color:dodgerblue; 
+    color: white; 
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+
+/* button to add ne habit */
+
+#addHabit button{
+    
+   height: 42px;  
+   margin-left: auto;
+   width: 50px;
+   border: 0;
+   background-color: greenyellow;
+   cursor: pointer;
+   /* added outer  shadow to the button  */
+   box-shadow: 0 0 4px 2px black;
+
+
+ }
+ /* input text field  */
+input{
+    width: 100%;
+    height: 40px;
+    background-color:yellowgreen;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    font-size:large ;
+    border: none;
+    outline: none;
+    /* added inner shadow to look good */
+   box-shadow: inset 0 0 10px 2px gray;
+}
+
+ul {
+    /* margin auto */
+    margin: auto;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+li {
+    
+    background-color:black;
+    /* text color set to white */
+    color: white;
+    padding: 5px;
+    margin-top: 2px;
+
+
+}
+/* to set alternate color to gray  */
+ li:nth-child(2n){
+background-color:gray;
+}
+
+li div{
+  
+    width: 30%;
+    /* div set to inline block to keep in li tag */
+    display: inline-block;
+    font-weight: bolder;
+    font-size: large;
+
+}
+
+
+.item{
+    text-align: center;
+     color: white;
+     padding-left: 2px;
+     padding-right: 2px;
+
+     
+}
+
+.fa-check{
+    /* completed habit icon color */
+    color: greenyellow;
+}
+
+.fa-times{
+    /* not completed habit icon color */
+    color: red;
+}
+
+
+i{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:780px) {
+    li div{
+  
+        width: 30%;
+        /* div set to inline block to keep in li tag */
+        display: inline-block;
+        font-weight: bolder;
+        font-size: xx-small;
+    
+    }
+
+    body{
+        width: 100vw;
+        margin: 0px;
+        font-size: xx-small;
+    }
+    body{
+        padding: 0;
+    }
+  }
