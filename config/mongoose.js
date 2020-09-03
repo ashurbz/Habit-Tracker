@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 
-mongoose.connect("mongodb+srv://ramesh:ptwmjg.ad@cluster0.mijqg.gcp.mongodb.net/habit-tracker?retryWrites=true&w=majority");
+mongoose.connect("mongodb://localhost:27017/habitTracker");
 
 // accquring connection to check for errors
 const connection=mongoose.connection;
