@@ -12,7 +12,7 @@ const app=express();
 
 
 //on port
-const port=process.env.PORT||8000;
+const port=process.env.PORT|| 8000;
 
 //on port
 
