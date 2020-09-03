@@ -23,7 +23,7 @@ body{
 /* button for saving changes */
 #addChanges button{
   width: 100%;
-background-color: greenyellow;
+background-color: white;
 /* color: aliceblue; */
 font-weight: bold;
 font-size: large;
@@ -31,7 +31,7 @@ padding: 10px;
 border: 0;
 cursor: pointer;
 /* added outer shadow to the button */
-box-shadow: 0 0 4px 2px black;
+box-shadow: 0 0 4px 2px aqua;
 }
 
 
@@ -39,7 +39,7 @@ box-shadow: 0 0 4px 2px black;
 /* header  */
 h1{
     text-align: center;
-    background-image: linear-gradient(greenyellow,white);
+    background-image: linear-gradient(grey,white);
     padding: 20px;
     margin: 0;
 }
@@ -49,7 +49,7 @@ h1{
 
     font-weight: bold; 
     font-size: large; 
-    background-color:dodgerblue; 
+    background-color:cyan; 
     color: white; 
     margin-bottom: 5px;
     padding: 5px;
@@ -64,7 +64,7 @@ h1{
    margin-left: auto;
    width: 50px;
    border: 0;
-   background-color: greenyellow;
+   background-color: blueviolet;
    cursor: pointer;
    /* added outer  shadow to the button  */
    box-shadow: 0 0 4px 2px black;
@@ -75,7 +75,7 @@ h1{
 input{
     width: 100%;
     height: 40px;
-    background-color:yellowgreen;
+    background-color:whitesmoke;
     border: 0;
     color: white;
     font-weight: bold;
@@ -83,7 +83,7 @@ input{
     border: none;
     outline: none;
     /* added inner shadow to look good */
-   box-shadow: inset 0 0 10px 2px gray;
+   box-shadow: inset 0 0 10px 2px aquamarine;
 }
 
 ul {

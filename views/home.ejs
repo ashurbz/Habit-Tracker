@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bb4b230bb4.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
 </head>
@@ -48,7 +49,7 @@
     <form action="/save" method="post" id="addChanges">
         
         <%for(let i=0;i<habits.length;i++ ) {%>
-            <li> <a style="text-decoration: none; color: red;" href="/delete/?id=<%=habits[i].id%>"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
+            <li> <a style="text-decoration: none; color: red;" href="/delete/?id=<%=habits[i].id%>"><i class="far fa-trash-alt" aria-hidden="true"></i></a>
                 <div><%=habits[i].habit%> 
                 <input style="display: none;" name="id" type="text" value="<%=habits[i]._id%>">
                      
@@ -86,9 +87,6 @@
         </form>
           
     </ul>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="notify.js"></script>
-    <script src="https://use.fontawesome.com/549dd1e837.js"></script>  
     <script src="script.js"></script>  
    
 </body>
